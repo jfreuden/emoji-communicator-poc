@@ -1,0 +1,1 @@
+- Emoji Base fetched from https://emojibase.dev/docs/datasets/. According to https://github.com/milesj/emojibase it's under MIT license.

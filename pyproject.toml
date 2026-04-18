@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=62", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emoji-communicator-poc"
+version = "0.1.0"
+description = "Proof of concept game idea using emoji to communicate English sentences"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Joshua Freudenhammer" },
+]
+dependencies = [
+    "numpy",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "requests",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ipykernel",
+    "ipython",
+    "jupyter",
+    "jupytext",
+    "mypy",
+    "nbconvert",
+    "ruff",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 110
+
+[tool.isort]
+profile = "black"
+line_length = 110
